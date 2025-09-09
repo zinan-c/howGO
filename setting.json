@@ -1,0 +1,14 @@
+{
+    "go.useLanguageServer": true,
+    "go.languageServer": "gopls",
+    "go.formatTool": "goimports",
+    "go.lintTool": "staticcheck",
+    "go.lintOnSave": "package",
+    "go.autocompleteUnimportedPackages": true,
+    "go.docsTool": "gogetdoc",
+    "go.testFlags": ["-v"],
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    }
+}
