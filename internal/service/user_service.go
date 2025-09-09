@@ -5,20 +5,20 @@ package service
  * because the go.mod module name is changed to howgo
  */
 import (
-    "context"
-    "github.com/zinan-c/howGO/internal/model"
-    "github.com/zinan-c/howGO/internal/repository"
+	"context"
+	"howgo/internal/model"
+	repository "howgo/internal/repo"
 )
 
 type UserService interface {
-    RegisterUser(ctx context.Context, user *model.User) error
-    GetUser(ctx context.Context, id int) (*model.User, error)
+	RegisterUser(ctx context.Context, user *model.User) error
+	GetUser(ctx context.Context, id int) (*model.User, error)
 }
 
 type userService struct {
-    userRepo repository.UserRepository
+	userRepo repository.UserRepository
 }
 
-func NewUserService(userRepo repository.UserRepository) UserService {
-    return &userService{userRepo: userRepo}
-}
+// func NewUserService(userRepo repository.UserRepository) UserService {
+//     return &userService{userRepo: userRepo}
+// }
