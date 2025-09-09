@@ -1,3 +1,3 @@
-module go-demo
+module howgo
 
 go 1.25.1
