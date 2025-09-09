@@ -7,7 +7,7 @@ project/
 ├── go.mod
 └── *.go
 
-*Midle size prj:
+*Middle size prj:
 project/
 ├── cmd/
 ├── internal/
