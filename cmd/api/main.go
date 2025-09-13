@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println("🎉 congrate!")
+	fmt.Println("🎉 congregate!")
 	fmt.Println("✨ From the Homebrew")
 
 	fmt.Printf("Current time: %s\n", time.Now().Format("2006-01-02 15:04:05"))
