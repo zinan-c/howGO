@@ -3,9 +3,72 @@ package main
 import (
 	"container/list"
 	"fmt"
+	"howgo/internal/model"
 )
 
 func main() {
+	//normal()
+
+	//listNode()
+
+	//linkedList()
+}
+
+func linkedList() {
+	list := model.NewLinkedList()
+	list.AddLast(1)
+	list.AddLast(2)
+	list.AddLast(3)
+	list.AddFirst(0)
+	list.Add(2, 100)
+
+	list.Display()
+	// size = 5
+	// 0 <-> 1 <-> 100 <-> 2 <-> 3 <-> null
+}
+func listNode() {
+	head := model.CreateLinkedList([]int{1, 2, 3, 4, 5})
+
+	for p := head; p != nil; p = p.Next {
+		fmt.Println(p.Val)
+	}
+
+	// insert to first element
+	newNode := &model.ListNode{Val: 0}
+	newNode.Next = head
+	head = newNode
+
+	// 0 -> 1 -> 2 -> 3 -> 4 -> 5
+	for p := head; p != nil; p = p.Next {
+		fmt.Println(p.Val)
+	}
+
+	// in the tail insert element 6
+	p := head
+	// goto latest
+	for p.Next != nil {
+		p = p.Next
+	}
+	p.Next = &model.ListNode{Val: 6}
+
+	// 0 -> 1 -> 2 -> 3 -> 4 -> 5 ->6
+	for p := head; p != nil; p = p.Next {
+		fmt.Println(p.Val)
+	}
+
+	headDoubly := model.CreateDoublyLinkedList([]int{1, 2, 3, 4, 5})
+	var tail *model.DoublyListNode
+
+	for p := headDoubly; p != nil; p = p.Next {
+		fmt.Println(p.Val)
+		tail = p
+	}
+	for p := tail; p != nil; p = p.Prev {
+		fmt.Println(p.Val)
+	}
+}
+
+func normal() {
 	/**
 		** List
 	**/
